@@ -8,7 +8,7 @@ const Footer = () => {
       <Container>
         <footer className="footer p-10 bg-slate-300 text-base-content">
           <div className="mx-auto">
-            <img src={img} alt="" width="100" height="100" />
+            <img className="rounded" src={img} alt="" width="100" height="100" />
             <p className="mt-4">Copyright © 2023 - All right reserved</p>
           </div>
           <div>
