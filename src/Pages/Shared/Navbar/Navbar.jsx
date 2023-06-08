@@ -1,4 +1,5 @@
 import Container from "../Container/Container";
+// import Avatar from "./Avatar";
 
 
 const Navbar = () => {
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full z-10">
       <Container>
-      <div className="navbar bg-slate-400 shadow-md">
+      <div className="navbar bg-slate-300 shadow-md">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,6 +31,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <a className="btn">Button</a>
+          {/* <Avatar></Avatar> */}
         </div>
       </div>
       </Container>
