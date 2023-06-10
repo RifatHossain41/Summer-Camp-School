@@ -1,12 +1,32 @@
+import { useContext } from "react";
 import Container from "../Container/Container";
+import { AuthContext } from "../../../provider/AuthProvider";
+import { Link } from "react-router-dom";
 // import Avatar from "./Avatar";
 
 
 const Navbar = () => {
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+    .then(() => {})
+    .catch(error => console.log(error))
+  }
   const navOptions = (
     <>
-        <li><a>Home</a></li>    
-        <li><a>Item 3</a></li>
+         <li><Link to="/">Home</Link></li>
+        <li><Link to="/instructors">Instructors</Link></li>
+        <li><Link to="/classes">Classes</Link> </li>
+        {
+      user?.email ? <>
+           <li><Link to="/dashboard">Dashboard</Link></li>  
+          
+           <button className='btn btn-secondary' onClick={handleLogOut}>Log Out</button>   
+      </>
+
+      : " "
+  }
     </>
   )
   return (
@@ -30,8 +50,15 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
-          {/* <Avatar></Avatar> */}
+        { 
+          user?.email ?  <>
+            <img className='rounded-lg  mr-4' src={user.photoURL ? user.photoURL : "https://i.ibb.co/yQmRyGC/IMG-20200918-151309-01.jpg"} alt="" width="30" height="30"/>
+          </>
+          :<>
+           <button className='btn btn-secondary'><Link to="/login">Login</Link></button>
+          </>
+        }
+
         </div>
       </div>
       </Container>
