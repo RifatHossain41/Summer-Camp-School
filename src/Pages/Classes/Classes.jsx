@@ -11,7 +11,7 @@ const Classes = () => {
      .then(data => setClasses(data))
   }, [])
   return (
-    <div>
+    <div className="grid lg:grid-cols-3 gap-5">
       {
         classes.map(menu => <ClassesPage
           key={menu._id}
