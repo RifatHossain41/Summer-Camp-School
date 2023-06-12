@@ -17,3 +17,8 @@ i:hover {
   color: #00fcb6;
   cursor: pointer;
 }
+
+.drawer-side a {
+  background-color: transparent;
+  font-size: medium;
+}

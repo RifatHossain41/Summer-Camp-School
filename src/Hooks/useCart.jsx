@@ -12,7 +12,6 @@ const useCart = () => {
       const res = await fetch(`http://localhost:4000/carts?email=${user?.email}`, {headers: {
         authorization: `bearer ${token}`
       }})
-      console.log(res)
       return res.json();
     }
    })

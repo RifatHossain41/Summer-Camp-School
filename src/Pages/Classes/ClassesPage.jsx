@@ -40,7 +40,7 @@ const ClassesPage = ({menu}) => {
    }
    else{
     Swal.fire({
-      title: 'Please login to order the food',
+      title: 'Please login',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
