@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 
-const useMenu = () => { 
+const useClasses = () => { 
 
   const {data: classes = [], isLoading: loading, refetch} = useQuery({
     queryKey: ['classes'],
@@ -14,4 +14,4 @@ const useMenu = () => {
   return [classes, loading, refetch]
 };
 
-export default useMenu;
+export default useClasses;
