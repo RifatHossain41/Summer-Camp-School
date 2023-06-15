@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
 
-const MyClasses = () => {
+const MySelectedClasses = () => {
   const [cart, refetch] = useCart();
 
   const handleDelete = menu => {
@@ -91,4 +91,4 @@ const MyClasses = () => {
   );
 };
 
-export default MyClasses;
+export default MySelectedClasses;

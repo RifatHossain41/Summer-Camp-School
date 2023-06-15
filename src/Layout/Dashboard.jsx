@@ -31,10 +31,11 @@ const Dashboard = () => {
        : isInstructor ? 
        <>
          <li><NavLink to="/dashboard/addclass">Add Class</NavLink></li>
+         <li><NavLink to="/dashboard/myclass">My Classes</NavLink></li>
        </>
        : 
       <>
-        <li><NavLink to="/dashboard/myclasses">My Classes</NavLink></li>
+        <li><NavLink to="/dashboard/Myselectedclasses">My Selected Classes</NavLink></li>
         <li><NavLink to="/dashboard/payment">Payment</NavLink></li>
       </>
       }

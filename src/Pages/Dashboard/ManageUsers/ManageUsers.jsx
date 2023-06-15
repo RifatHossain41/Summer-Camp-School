@@ -6,7 +6,6 @@ import { useQuery } from "@tanstack/react-query";
 
 
 const ManageUsers = () => {
-  // const [classes, , refetch] = useClasses();
   const [axiosSecure] = useAxiosSecure();
   const {data: students = [], refetch} = useQuery(['students'], async() => {
     const res = await fetch('http://localhost:4000/students')

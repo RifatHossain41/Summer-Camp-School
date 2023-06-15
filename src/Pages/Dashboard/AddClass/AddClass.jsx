@@ -1,13 +1,18 @@
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import useAuth from "../../../Hooks/useAuth";
 
 const image_hosting_token=import.meta.env.VITE_IMGBB_KEY;
 
 const AddClass = () => {
+  const {user} = useAuth();
   const [ axiosSecure ] = useAxiosSecure();
   const { register, handleSubmit, reset } = useForm();
-  const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`
+  const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_token}
+  `
+
+  const emailValue = user.email;
 
   const onSubmit = data => {
 
@@ -42,6 +47,7 @@ const AddClass = () => {
       }
     })
   };
+
   return (
     <div className="w-full px-10">
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -65,9 +71,9 @@ const AddClass = () => {
         <label className="label">
           <span className="label-text font-semibold">Email*</span>
         </label>
-        <input type="email" placeholder="email" 
-        {...register("email", {required: true}) } 
-        className="input input-bordered w-full " />
+        <input type="email" placeholder="email"
+        {...register("email", {required: true} ) }
+        className="input input-bordered w-full " value={emailValue} readOnly/>
       </div>
      <div className="form-control w-full mb-4">
         <label className="label">
