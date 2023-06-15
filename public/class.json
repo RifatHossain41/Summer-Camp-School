@@ -1,14 +1,14 @@
 [
     {
-        "_id": "642c155b2c4774f05c36eeaa",
-        "available_seat": 55,
-        "name": "Football",
-        "instructor_name": "Shopon doy",
-        "instructor_image": "https://i.ibb.co/WV6MhZz/teacher-12.jpg",
-        "email": "shopon@gmail.com",
-        "image": "https://i.ibb.co/7xfsphV/football.jpg",
+        "_id": "642c155b2c4774f05c36ee88",
+        "available_seat": 39,
+        "name": "Batminton",
+        "instructor_name": "Shihab Uddin",
+        "instructor_image": "https://i.ibb.co/pdFYXNR/teacher-9.jpg",
+        "email": "shihab@gmail.com",
+        "image": "https://i.ibb.co/BnCwSG4/batminton.jpg",
         "category": "popularClass",
-        "price": 10
+        "price": 16
     },
     {
         "_id": "642c155b2c4774f05c36eeb9",
@@ -18,6 +18,17 @@
         "instructor_image": "https://i.ibb.co/7Qpk6tn/teacher-11.jpg",
         "email": "keramot@gmail.com",
         "image": "https://i.ibb.co/YpNymqj/Swimming-1.jpg",
+        "category": "popularClass",
+        "price": 13
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+        "available_seat": 45,
+        "name": "Race",
+        "instructor_name": "Towhid Hridoy",
+        "instructor_image": "https://i.ibb.co/kmPcmV6/images-20.jpg",
+        "email": "towhid@gmail.com",
+        "image": "https://i.ibb.co/qnTwVmh/race.jpg",
         "category": "popularClass",
         "price": 13
     },
@@ -33,37 +44,26 @@
         "price": 14
     },
     {
-        "_id": "642c155b2c4774f05c36ee88",
-        "available_seat": 39,
-        "name": "Batminton",
-        "instructor_name": "Shihab Uddin",
-        "instructor_image": "https://i.ibb.co/pdFYXNR/teacher-9.jpg",
-        "email": "shihab@gmail.com",
-        "image": "https://i.ibb.co/BnCwSG4/batminton.jpg",
+        "_id": "642c155b2c4774f05c36ee9e",
+        "available_seat": 25,
+        "name": "Buscketball",
+        "instructor_name": "Yeasir ali",
+        "instructor_image": "https://i.ibb.co/DYdfCQs/teacher-5.jpg",
+        "email": "yeasir@gmail.com",
+        "image": "https://i.ibb.co/rswtddb/buscketball.jpg",
         "category": "popularClass",
-        "price": 16
+        "price": 10
     },
     {
-        "_id": "642c155b2c4774f05c36ee7a",
-        "available_seat": 33,
-        "name": "Desi",
-        "instructor_name": "Shakib Khan",
-        "instructor_image": "https://i.ibb.co/hs2g4Yn/teacher-8.jpg",
-        "email": "shakib@gmail.com",
-        "image": "https://i.ibb.co/T4GfKv4/desi.jpg",
+        "_id": "642c155b2c4774f05c36eeaa",
+        "available_seat": 55,
+        "name": "Football",
+        "instructor_name": "Shopon doy",
+        "instructor_image": "https://i.ibb.co/WV6MhZz/teacher-12.jpg",
+        "email": "shopon@gmail.com",
+        "image": "https://i.ibb.co/7xfsphV/football.jpg",
         "category": "popularClass",
-        "price": 15
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee8c",
-        "available_seat": 45,
-        "name": "Race",
-        "instructor_name": "Towhid Hridoy",
-        "instructor_image": "https://i.ibb.co/kmPcmV6/images-20.jpg",
-        "email": "towhid@gmail.com",
-        "image": "https://i.ibb.co/qnTwVmh/race.jpg",
-        "category": "popularClass",
-        "price": 13
+        "price": 10
     },
     {
         "_id": "642c155b2c4774f05c36ee94",
@@ -77,15 +77,15 @@
         "price": 14
     },
     {
-        "_id": "642c155b2c4774f05c36ee9e",
-        "available_seat": 25,
-        "name": "Buscketball",
-        "instructor_name": "Yeasir ali",
-        "instructor_image": "https://i.ibb.co/DYdfCQs/teacher-5.jpg",
-        "email": "yeasir@gmail.com",
-        "image": "https://i.ibb.co/rswtddb/buscketball.jpg",
+        "_id": "642c155b2c4774f05c36ee7a",
+        "available_seat": 33,
+        "name": "Desi",
+        "instructor_name": "Shakib Khan",
+        "instructor_image": "https://i.ibb.co/hs2g4Yn/teacher-8.jpg",
+        "email": "shakib@gmail.com",
+        "image": "https://i.ibb.co/T4GfKv4/desi.jpg",
         "category": "popularInstructors",
-        "price": 10
+        "price": 15
     },
     {
         "_id": "642c155b2c4774f05c36eea6",
