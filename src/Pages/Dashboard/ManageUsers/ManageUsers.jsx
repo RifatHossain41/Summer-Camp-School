@@ -1,12 +1,54 @@
-import { FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useClasses from "../../../Hooks/useClasses";
 import Swal from "sweetalert2";
 
 
+
 const ManageUsers = () => {
   const [classes, , refetch] = useClasses();
   const [axiosSecure] = useAxiosSecure();
+
+
+  const handleMakeAdmin = menu => {
+    fetch(`http://localhost:4000/classes/admin/${menu._id}`, {
+      method: 'PATCH'
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      if(data.modifiedCount){
+        refetch();
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: `${menu.name} is an Admin Now!`,
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+    })
+  }
+
+  // const handleMakeInstructor = menu => {
+  //   fetch(`http://localhost:4000/classes/instructor/${menu._id}`, {
+  //     method: 'PATCH'
+  //   })
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     console.log(data)
+  //     if(data.modifiedCount){
+  //       refetch();
+  //       Swal.fire({
+  //         position: 'top-end',
+  //         icon: 'success',
+  //         title: `${menu.name} is an Instructor Now!`,
+  //         showConfirmButton: false,
+  //         timer: 1500
+  //       })
+  //     }
+  //   })
+  // }
  
   const handleDelete = (menu) => {
     Swal.fire({
@@ -68,8 +110,12 @@ const ManageUsers = () => {
           </td>
           <td>{menu.name}</td>
           
-          <td>${menu.email}</td>
-          <td></td>
+          <td>{menu.email}</td>
+          <td>{ menu.role === 'admin' ? 'admin' : <button onClick={() => handleMakeAdmin(menu)} className="btn btn-ghost bg-purple-500 text-white">Admin</button>
+            }
+             {/* { menu.role === 'instructor' ? 'instructor' : <button onClick={() => handleMakeInstructor(menu)} className="btn btn-ghost bg-indigo-500 text-white">Instructor</button>
+          } */}
+          </td>
           <td>
             <button onClick={() => handleDelete(menu)} className="btn btn-ghost bg-accent text-white"><FaTrashAlt /></button>
           </td>

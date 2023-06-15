@@ -12,6 +12,7 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import AddClass from "../Pages/Dashboard/AddClass/AddClass";
 import ManageUsers from "../Pages/Dashboard/ManageUsers/ManageUsers";
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -58,7 +59,8 @@ export const router = createBrowserRouter([
       {
         path: 'manageuser',
         element: <ManageUsers></ManageUsers>
-      }
+      },
+      
     ]
   }
 ]);
