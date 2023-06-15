@@ -16,7 +16,7 @@
         "name": "Swimming",
         "instructor_name": "Keramot ali",
         "instructor_image": "https://i.ibb.co/7Qpk6tn/teacher-11.jpg",
-        "email": "Keramot@gmail.com",
+        "email": "keramot@gmail.com",
         "image": "https://i.ibb.co/YpNymqj/Swimming-1.jpg",
         "category": "popularClass",
         "price": 13
@@ -27,7 +27,7 @@
         "name": "Cricket",
         "instructor_name": "Josim Khan",
         "instructor_image": "https://i.ibb.co/KxQZGP4/teacher-10.jpg",
-        "email": "Josim@gmail.com",
+        "email": "josim@gmail.com",
         "image": "https://i.ibb.co/x6D384N/cricket.jpg",
         "category": "popularClass",
         "price": 14

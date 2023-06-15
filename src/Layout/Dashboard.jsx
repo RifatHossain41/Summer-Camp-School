@@ -4,7 +4,9 @@ import useAdmin from "../Hooks/useAdmin";
 import useInstructor from "../Hooks/useInstructor";
 
 
+
 const Dashboard = () => {
+
   const [isAdmin] = useAdmin();
   const [isInstructor] = useInstructor();
 
@@ -21,21 +23,21 @@ const Dashboard = () => {
     <div className="drawer-side">
       <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
       <ul className="menu p-4 w-80 h-full bg-violet-700 font-bold">
-       {
-        isAdmin ? <>
-        </> : <>
+
+       {isAdmin ? 
+        <>
          <li><NavLink to="/dashboard/manageuser">Manage User</NavLink></li>
+        </>
+       : isInstructor ? 
+       <>
+         <li><NavLink to="/dashboard/addclass">Add Class</NavLink></li>
+       </>
+       : 
+      <>
         <li><NavLink to="/dashboard/myclasses">My Classes</NavLink></li>
         <li><NavLink to="/dashboard/payment">Payment</NavLink></li>
-<li><NavLink to="/dashboard/addclass">Add Class</NavLink></li>
-        </>
-       }
-
-      {/* {
-        isInstructor ? <>
-        </> : " "
-      } */}
-     
+      </>
+      }
        
 
        <div className="divider">OR</div>
