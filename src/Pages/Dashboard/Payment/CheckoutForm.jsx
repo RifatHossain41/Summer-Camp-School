@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../../Hooks/useAuth";
 
 
-const CheckoutForm = ({ cart }) => {
+const CheckoutForm = ({ price }) => {
   const {user} = useAuth();
   const stripe = useStripe();
   const elements = useElements();
@@ -13,12 +13,12 @@ const CheckoutForm = ({ cart }) => {
   
 
   useEffect( () => {
-    axiosSecure.post('/create-payment-intent', { items: [{ id: cart._id }] })
+    axiosSecure.post('/create-payment-intent', { price })
      .then(data => {
       console.log(data.data.clientSecret)
       setClientSecret(data.data.clientSecret)
      })
-   }, [cart, axiosSecure])
+   }, [price, axiosSecure])
 
   const handleSubmit = async(event) => {
     event.preventDefault();
