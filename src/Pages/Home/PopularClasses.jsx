@@ -15,7 +15,7 @@ const PopularClasses = () => {
   return (
     <div>
       <div>
-        <h2 className="text-3xl text-center font-bold my-5">Popular Classes Section</h2>
+        <h2 className="text-3xl text-center font-bold my-8">Popular Classes Section</h2>
       </div>
       <Container>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
